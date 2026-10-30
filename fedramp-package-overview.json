@@ -38,7 +38,8 @@
       ],
       "url": "https://trust.paramify.com/sandsolutions/sgc2/compliance-programs/678abec0-f8b9-497f-ba5a-12b7a29b2d39",
       "repositoryDescription": "SGC2 Secure Configuration Guide (SCG-CSO-RSC).",
-      "authenticationRequired": true
+      "authenticationRequired": true,
+ "accessRequestInstructions": "Federal agencies, FedRAMP, and current or prospective customers request access using the Request Access button on the SGC2 Trust Center at https://trust.paramify.com/sandsolutions/sgc2. Sand Solutions reviews each request and grants access to approved requesters, typically within one business day."
     },
     "additionalRepositories": [],
     "nextOngoingCertificationReportDate": "2027-09-01"
