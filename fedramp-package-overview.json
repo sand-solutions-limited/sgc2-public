@@ -38,7 +38,7 @@
       ],
       "url": "https://trust.paramify.com/sandsolutions/sgc2/compliance-programs/678abec0-f8b9-497f-ba5a-12b7a29b2d39",
       "repositoryDescription": "SGC2 Secure Configuration Guide (SCG-CSO-RSC).",
-      "authenticationRequired": false
+      "authenticationRequired": true
     },
     "additionalRepositories": [],
     "nextOngoingCertificationReportDate": "2027-09-01"
