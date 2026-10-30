@@ -2,14 +2,214 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Sand Solutions Government Cloud (SGC2)</title>
+  <title>SGC2 Public Resources</title>
+  <meta name="description" content="Public FedRAMP resources for Sand Solutions Government Cloud (SGC2).">
+  <link rel="icon" href="https://sgc2.com/wp-content/uploads/2025/07/Sand-Solutions-Logo-updated.png">
+  <style>
+    :root {
+      --navy: #13294b;
+      --navy-2: #1f3d6b;
+      --sand: #c8a56a;
+      --sand-soft: #f6f0e4;
+      --ink: #1d2433;
+      --muted: #5b6475;
+      --line: #e3e6ec;
+      --card: #ffffff;
+      --bg: #f7f8fa;
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #e9ecf2;
+        --muted: #a7b0c0;
+        --line: #2a3346;
+        --card: #161d2b;
+        --bg: #0e1420;
+        --sand-soft: #241f16;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e3e6ec;
+    }
+    header .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; min-height: 72px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--navy); }
+    .brand img { height: 44px; width: auto; display: block; }
+    .brand .fallback { font-weight: 700; font-size: 1.1rem; display: none; }
+    .site-link {
+      font-size: .9rem; color: var(--navy); text-decoration: none; font-weight: 600;
+      border: 1px solid #d5dae3; padding: 8px 14px; border-radius: 999px; white-space: nowrap;
+    }
+    .site-link:hover { border-color: var(--navy); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+      color: #fff;
+      padding: 64px 0 88px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; right: -120px; top: -120px;
+      width: 420px; height: 420px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,165,106,.35), rgba(200,165,106,0) 70%);
+    }
+    .eyebrow {
+      display: inline-block; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--sand); font-weight: 700; margin-bottom: 14px;
+    }
+    .hero h1 { font-size: clamp(1.9rem, 4.2vw, 2.8rem); line-height: 1.15; margin: 0 0 16px; max-width: 760px; }
+    .hero p { margin: 0; max-width: 680px; color: #d6deeb; font-size: 1.08rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .tag {
+      font-size: .82rem; font-weight: 600; padding: 6px 12px; border-radius: 999px;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); color: #fff;
+    }
+
+    /* Cards */
+    main { margin-top: -40px; position: relative; z-index: 1; padding-bottom: 64px; }
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 24px; display: flex; flex-direction: column; gap: 10px;
+      box-shadow: 0 6px 24px rgba(19,41,75,.08);
+    }
+    .icon {
+      width: 42px; height: 42px; border-radius: 10px; display: grid; place-items: center;
+      background: var(--sand-soft); color: var(--sand);
+    }
+    .icon svg { width: 22px; height: 22px; }
+    .card h2 { font-size: 1.1rem; margin: 6px 0 0; }
+    .card p { margin: 0; color: var(--muted); font-size: .95rem; flex: 1; }
+    .btn {
+      align-self: flex-start; margin-top: 8px; text-decoration: none; font-weight: 600; font-size: .92rem;
+      padding: 10px 16px; border-radius: 10px; background: var(--navy); color: #fff; border: 1px solid transparent;
+    }
+    .btn:hover { background: var(--navy-2); }
+    .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+    .btn.ghost:hover { border-color: var(--muted); }
+    .note { font-size: .82rem; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .actions .btn { margin-top: 0; }
+
+    /* Contact */
+    .contact {
+      margin-top: 28px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 24px; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 20px; align-items: start;
+    }
+    .contact h2 { font-size: 1.1rem; margin: 0 0 4px; }
+    .contact p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .contact .label { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .contact a { font-weight: 600; text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+
+    footer { margin-top: 8px; border-top: 1px solid var(--line); padding: 22px 0 32px; color: var(--muted); font-size: .85rem; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; }
+      .hero { padding: 48px 0 80px; }
+    }
+    @media (max-width: 480px) {
+      .site-link { display: none; }
+    }
+
+    /* Files list */
+    .panel {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      box-shadow: 0 6px 24px rgba(19,41,75,.08); overflow: hidden;
+    }
+    .panel-head {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+      padding: 20px 24px; border-bottom: 1px solid var(--line);
+    }
+    .panel-head h2 { font-size: 1.1rem; margin: 0; }
+    .file {
+      display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center;
+      padding: 20px 24px;
+    }
+    .file + .file { border-top: 1px solid var(--line); }
+    .file h3 { margin: 0; font-size: 1rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; }
+    .file p { margin: 2px 0 0; color: var(--muted); font-size: .92rem; }
+    .file .btn { margin-top: 0; justify-self: start; }
+    @media (max-width: 640px) {
+      .file { grid-template-columns: 1fr; }
+      .file .icon { display: none; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Sand Solutions Government Cloud (SGC2)</h1>
-  <p>FedRAMP certification package overview:
-     <a href="/fedramp-package-overview.json">fedramp-package-overview.json</a></p>
-  <p>SGC2 Trust Center:
-     <a href="https://trust.paramify.com/sandsolutions/sgc2">trust.paramify.com/sandsolutions/sgc2</a></p>
+
+  <header>
+    <div class="wrap">
+      <span class="brand">
+        <img src="https://sgc2.com/wp-content/uploads/2025/07/Sand-Solutions-Logo-updated.png"
+             alt="Sand Solutions"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+        <span class="fallback">Sand Solutions</span>
+      </span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Public FedRAMP Resources</span>
+      <h1>Sand Solutions Government Cloud (SGC2)</h1>
+      <p>Machine-readable FedRAMP information published by Sand Solutions for SGC2.</p>
+      <div class="tags">
+        <span class="tag">IaaS / PaaS</span>
+        <span class="tag">FedRAMP Moderate</span>
+        <span class="tag">Rev. 5</span>
+        <span class="tag">CR26</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="panel" aria-labelledby="files-h">
+      <div class="panel-head">
+        <h2 id="files-h">Published files</h2>
+        <a class="btn ghost" href="https://github.com/Sand-Solutions-Limited/sgc2-public">View on GitHub</a>
+      </div>
+
+      <div class="file">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H6a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2"/><path d="M16 3h2a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2"/></svg>
+        </div>
+        <div>
+          <h3>fedramp-package-overview.json</h3>
+          <p>FedRAMP certification package overview (FRC-CSO-PKG)</p>
+        </div>
+        <a class="btn" href="fedramp-package-overview.json">View JSON</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 Sand Solutions. All rights reserved.</span>
+    </div>
+  </footer>
+
 </body>
 </html>
