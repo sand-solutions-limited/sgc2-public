@@ -64,7 +64,35 @@
   },
   "advisors": [],
   "thirdPartyInformationResources": {
-    "certified": [],
-    "nonCertified": []
+    "certified": [
+      {
+        "fedRampCertifiedThirdPartyInformationResource": "F1404304159",
+        "useCase": "DataBank colocation facilities hosting SGC2 infrastructure; physical and environmental (PE) controls are inherited from DataBank."
+      },
+      {
+        "fedRampCertifiedThirdPartyInformationResource": "FR1918740338",
+        "useCase": "Sumo Logic log aggregation, retention, and security monitoring for SGC2 audit and event logs."
+      },
+      {
+        "fedRampCertifiedThirdPartyInformationResource": "FR2218073444",
+        "useCase": "Lucid GovSuite for SGC2 architecture and data flow diagrams."
+      },
+      {
+        "fedRampCertifiedThirdPartyInformationResource": "FR2116544598A",
+        "useCase": "Keeper password vault for Sand Solutions administrative credentials and secrets."
+      },
+      {
+        "fedRampCertifiedThirdPartyInformationResource": "FR2428769635XL",
+        "useCase": "Paramify Cloud for FedRAMP documentation, control management, and the SGC2 Trust Center."
+      }
+    ],
+    "nonCertified": [
+      {
+        "name": "Microsoft 365 (Commercial)",
+        "provider": "Microsoft",
+        "useCase": "Sand Solutions corporate email, collaboration, and staff authentication.",
+        "website": "https://www.microsoft.com/microsoft-365"
+      }
+    ]
   }
 }
