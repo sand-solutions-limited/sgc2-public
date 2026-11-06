@@ -47,8 +47,8 @@
   "contactInformation": [
     {
       "contactType": "Security",
-      "contactName": "SGC2 Security Contact",
-      "contactEmail": "security@sgc2.com",
+      "contactName": "SGC2 FedRAMP Contact",
+      "contactEmail": "fedramp@sgc2.com",
       "contactPhone": "800-730-5288"
     },
     {
